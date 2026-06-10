@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Formulário</title>
+
+<style>
+
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ffc0cb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.formulario{
+    width: 500px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.titulo{
+    text-align: center;
+    color: deeppink;
+    margin-bottom: 20px;
+}
+
+.campo{
+    margin-bottom: 15px;
+}
+
+.rotulo{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-texto{
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.input-texto:focus{
+    outline: none;
+    border: 2px solid deeppink;
+    box-shadow: 0 0 5px pink;
+}
+
+.area-texto{
+    width: 100%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.area-texto:focus{
+    outline: none;
+    border: 2px solid deeppink;
+    box-shadow: 0 0 5px pink;
+}
+
+.opcoes{
+    margin-top: 5px;
+}
+
+.botao{
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    background-color: deeppink;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao:hover{
+    background-color: hotpink;
+}
+
+@media(max-width:600px){
+    .formulario{
+        width: 90%;
+    }
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="formulario">
+
+    <h1 class="titulo">Cadastro de Aluno</h1>
+
+    <form>
+
+        <div class="campo">
+            <label class="rotulo" for="nome">Nome</label>
+            <input class="input-texto" type="text" id="nome" name="nome">
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="email">E-mail</label>
+            <input class="input-texto" type="email" id="email" name="email">
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="senha">Senha</label>
+            <input class="input-texto" type="password" id="senha" name="senha">
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="data">Data de Nascimento</label>
+            <input class="input-texto" type="date" id="data" name="data">
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="curso">Curso</label>
+            <select class="input-texto" id="curso" name="curso">
+                <option>Selecione</option>
+                <option>Análise e Desenvolvimento de Sistemas</option>
+                <option>Engenharia de Software</option>
+                <option>Ciência da Computação</option>
+                <option>Sistemas de Informação</option>
+            </select>
+        </div>
+
+        <div class="campo">
+            <label class="rotulo">Sexo</label>
+
+            <div class="opcoes">
+                <input type="radio" id="feminino" name="sexo">
+                <label for="feminino">Feminino</label>
+
+                <input type="radio" id="masculino" name="sexo">
+                <label for="masculino">Masculino</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label class="rotulo">Interesses</label>
+
+            <div class="opcoes">
+                <input type="checkbox" id="programacao">
+                <label for="programacao">Programação</label><br>
+
+                <input type="checkbox" id="design">
+                <label for="design">Design</label><br>
+
+                <input type="checkbox" id="banco">
+                <label for="banco">Banco de Dados</label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="comentarios">Comentários</label>
+            <textarea class="area-texto" id="comentarios" name="comentarios"></textarea>
+        </div>
+
+        <div class="campo">
+            <label class="rotulo" for="foto">Upload de Foto</label>
+            <input type="file" id="foto" name="foto">
+        </div>
+
+        <button class="botao" type="submit">Enviar</button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
