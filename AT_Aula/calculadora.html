@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <script>
+     
+        alert("Insira os numeros para realizar as operações");
+        let a = parseFloat(prompt("Insira o Primeiro numero"));
+        let b = parseFloat(prompt("Insira o Segundo numero"));
+        alert("A Soma é: " + somar(a,b)+"\n"+
+        "A Subtração é: " + subtrair(a,b)+"\n"+
+        "A Multiplicação é: " + multiplicar(a,b)+"\n"+
+        "A Divisão é: " + dividir(a,b)+"\n");
+    
+
+
+        function somar (a,b){
+            return a+b;
+        }
+
+         function subtrair (a,b){
+            return a-b;
+        }
+
+         function multiplicar (a,b){
+            return a*b;
+        }
+
+         function dividir (a,b){
+            return a/b;
+        }
+
+
+    </script>
+    
+</body>
+</html>

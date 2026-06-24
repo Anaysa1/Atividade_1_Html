@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+</head>
+<body>
+    <script>
+        let nome = prompt("Digite o nome do produto");
+        let preco = parseFloat(prompt("Digite o preço do produto"));
+        let qtd = prompt("Digite a quantidade do produto");
+
+        alert(mensagem(nome,preco,qtd));
+
+        function mensagem (nome, preco, qtd){
+        alert("O Nome é: "+ nome +"\n"+
+        "O Preço é: " + preco+"\n"+
+        "A Quantidade é: " + qtd);
+        }
+
+
+    </script>
+</body>
+</html>
